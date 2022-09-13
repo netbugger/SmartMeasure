@@ -1,0 +1,33 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kr.co.apostech.smartmeasure">
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/apostech_ci"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/UnicampTheme">
+        <activity
+            android:name="kr.co.apostech.smartmeasure.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="kr.co.apostech.smartmeasure.BluetoothLeService"
+            android:enabled="true" />
+    </application>
+
+
+</manifest>

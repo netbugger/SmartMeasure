@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kr.co.apostech.battmon.kr.co.apostech.smartmeasure.BatteryMonitorFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_connect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="@string/ble_state_disconnected"
+                android:layout_weight="0.5"
+                app:icon="@drawable/bt_disconn"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFE0E0E0"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mode_img"
+                android:layout_width="100dp"
+                android:layout_height="200dp"
+                android:src="@drawable/height"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                app:icon="@drawable/height"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="50dp"
+                android:text="Height Measure"
+                android:textSize="20dp"
+                />
+            </LinearLayout>
+
+            <!--com.google.android.material.button.MaterialButton
+                android:id="@+id/control_btn_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginLeft="100dp"
+                android:layout_gravity="center"
+                app:icon="@drawable/btn_down"/-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFE0E0E0"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="10"
+            android:orientation="horizontal" >
+            <ProgressBar
+                android:id="@+id/pb_value"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:progress="0"
+                android:max="1000"/>
+            <TextView
+                android:id="@+id/tv_value"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:gravity="right"
+                />
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="cm"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFE0E0E0"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        android:orientation="horizontal" >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_mode"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Mode"
+                app:icon="@drawable/mode"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_measure"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Measure"
+                app:icon="@drawable/measure"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFE0E0E0"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_find"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:text="다른장치검색"
+            app:icon="@drawable/find"/>
+
+    </LinearLayout>
+</FrameLayout>
