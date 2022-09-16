@@ -14,7 +14,7 @@
 LIDARLite myLidarLite;
 
 //Button
-#define BTN 13
+#define BTN 14
 #define BTN_RELEASED 1
 #define BTN_HOLD 0
 #define BTN_NONE 0
@@ -32,7 +32,7 @@ typedef struct {
 button_t gBtn;
 
 // Laser
-#define LASER 17
+#define LASER 13
 #define PWM_CHANNEL 0
 //
 #define MODE_WAIT 0
@@ -64,9 +64,9 @@ uint16_t cfgVal;
 #define SPI_MISO 19
 #define OLED_D0 18  //CLK
 #define OLED_CS 5   //CS
-#define OLED_DC 14
-#define OLED_RES 26
-#define OLED_GND 27
+#define OLED_DC 17
+#define OLED_RES 16
+
 #define SCREEN_WIDTH 128  // OLED display width, in pixels
 #define SCREEN_HEIGHT 64  // OLED display height, in pixels
 
@@ -180,9 +180,6 @@ void setup() {
     Serial.println("BLE Started");
 
     //DISPLAY
-    pinMode(OLED_GND, OUTPUT);
-    digitalWrite(OLED_GND, LOW);
-
     if (!display.begin(SSD1306_SWITCHCAPVCC)) {
         Serial.println("SSD1306 allocation failed");
     }
